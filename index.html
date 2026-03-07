@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felix Aidala | Economist</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <div class="profile">
+                <div class="profile-photo">
+                    <img src="headshot.jpg" alt="Felix Aidala">
+                </div>
+                <h1 class="name">Felix Aidala</h1>
+                <p class="title">U.S. Economist</p>
+                <p class="affiliation"><a href="https://www.hiringlab.org" target="_blank" rel="noopener">Indeed Hiring Lab</a></p>
+            </div>
+
+            <nav class="contact">
+                <a href="mailto:felix.s.aidala@gmail.com" class="contact-item">
+                    <span class="icon">✉</span>
+                    <span>Email</span>
+                </a>
+                <a href="https://linkedin.com/in/felix-aidala" class="contact-item" target="_blank" rel="noopener">
+                    <span class="icon">in</span>
+                    <span>LinkedIn</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content">
+            <!-- Sticky Header: About + Tabs -->
+            <div class="sticky-header">
+                <!-- About Section -->
+                <section id="about">
+                    <p>Howdy! I'm an economist at the <a href="https://www.hiringlab.org" target="_blank" rel="noopener">Indeed Hiring Lab</a>, where I focus on the U.S. labor market. Previously, I was a research analyst in consumer behavior studies at the Federal Reserve Bank of New York. I hold an MA in Economics from Duke University.</p>
+                </section>
+
+                <!-- Tab Navigation -->
+                <div class="tabs">
+                    <button class="tab active" data-tab="writing">Public Writing</button>
+                    <button class="tab" data-tab="academic">Academic Research</button>
+                    <button class="tab" data-tab="media">Media</button>
+                </div>
+            </div>
+
+            <!-- Writing Panel -->
+            <div class="panel active" id="writing">
+                <!-- Monetary Policy Section -->
+                <section id="monetary-policy">
+                    <h2>Monetary Policy</h2>
+
+                    <div class="publication">
+                        <a href="https://www.hiringlab.org/2026/01/28/january-2026-fomc-reaction-a-cautious-pause/" class="pub-title" target="_blank" rel="noopener">January 2026 FOMC Reaction: A Cautious Pause</a>
+                        <p class="authors">with Laura Ullrich</p>
+                        <p class="venue">Indeed Hiring Lab, January 2026</p>
+                    </div>
+
+                    <div class="publication">
+                        <a href="https://libertystreeteconomics.newyorkfed.org/2023/08/consumers-perspectives-on-the-recent-movements-in-inflation-expectations/" class="pub-title" target="_blank" rel="noopener">Consumers' Perspectives on the Recent Movements in Inflation</a>
+                        <p class="authors">with New York Fed SCE Team</p>
+                        <p class="venue">Liberty Street Economics, August 2023</p>
+                    </div>
+                </section>
+
+                <!-- Labor Markets Section -->
+                <section id="labor-markets">
+                    <h2>Labor Markets</h2>
+
+                    <div class="publication">
+                        <a href="https://www.hiringlab.org/2026/03/03/healthcare-social-assistance-cant-fix-the-ailing-labor-market/" class="pub-title" target="_blank" rel="noopener">We Can't All Be Nurses</a>
+                        <p class="authors">with Sneha Puri</p>
+                        <p class="venue">Indeed Hiring Lab, March 2026</p>
+                    </div>
+
+                    <div class="publication">
+                        <a href="https://libertystreeteconomics.newyorkfed.org/2024/05/the-post-pandemic-shift-in-retirement-expectations-in-the-u-s/" class="pub-title" target="_blank" rel="noopener">The Post-Pandemic Shift in Retirement Expectations in the U.S.</a>
+                        <p class="authors">with G. Koşar and W. van der Klaauw</p>
+                        <p class="venue">Liberty Street Economics, May 2024</p>
+                    </div>
+
+                    <div class="publication">
+                        <a href="https://libertystreeteconomics.newyorkfed.org/2022/12/sce-labor-market-survey-shows-average-reservation-wage-continues-upward-trend/" class="pub-title" target="_blank" rel="noopener">SCE Labor Market Survey Shows Average Reservation Wage Continues Upward Trend</a>
+                        <p class="authors">with Gizem Koşar</p>
+                        <p class="venue">Liberty Street Economics, December 2022</p>
+                    </div>
+                </section>
+
+                <!-- Consumer Finance Section -->
+                <section id="consumer-finance">
+                    <h2>Consumer Finance</h2>
+
+                    <div class="publication">
+                        <a href="https://libertystreeteconomics.newyorkfed.org/2024/05/mortgage-rate-lock-in-and-homeowners-moving-plans/" class="pub-title" target="_blank" rel="noopener">Mortgage Rate Lock-In and Homeowners' Moving Plans</a>
+                        <p class="authors">with A. Haughwout, B. Hyman, J. Somerville, and W. van der Klaauw</p>
+                        <p class="venue">Liberty Street Economics, May 2024</p>
+                    </div>
+
+                    <div class="publication">
+                        <a href="https://libertystreeteconomics.newyorkfed.org/2024/02/how-and-why-do-consumers-use-buy-now-pay-later/" class="pub-title" target="_blank" rel="noopener">How and Why Do Consumers Use "Buy Now, Pay Later?"</a>
+                        <p class="authors">with D. Mangrum and W. van der Klaauw</p>
+                        <p class="venue">Liberty Street Economics, February 2024</p>
+                    </div>
+
+                    <div class="publication">
+                        <a href="https://libertystreeteconomics.newyorkfed.org/2023/09/who-uses-buy-now-pay-later/" class="pub-title" target="_blank" rel="noopener">Who Uses "Buy Now, Pay Later?"</a>
+                        <p class="authors">with D. Mangrum and W. van der Klaauw</p>
+                        <p class="venue">Liberty Street Economics, September 2023</p>
+                    </div>
+                </section>
+
+                </div>
+
+            <!-- Academic Research Panel -->
+            <div class="panel" id="academic">
+                <!-- Working Papers Section -->
+                <section id="working-papers">
+                    <h2>Working Papers</h2>
+
+                    <div class="publication">
+                        <a href="https://www.newyorkfed.org/research/staff_reports/sr1167" class="pub-title" target="_blank" rel="noopener">Understanding Consumer Demand for "Buy Now, Pay Later"</a>
+                        <p class="authors">with G. Koşar, D. Mangrum, and W. van der Klaauw</p>
+                        <p class="venue">New York Fed Staff Report #1167</p>
+                    </div>
+                </section>
+
+                <!-- Publications Section -->
+                <section id="publications">
+                    <h2>Publications</h2>
+
+                    <div class="publication">
+                        <a href="https://www.sciencedirect.com/science/article/abs/pii/S0304393224001120" class="pub-title" target="_blank" rel="noopener">Comment on "Partisan Expectations and COVID Era Inflation"</a>
+                        <p class="authors">with O. Armantier, G. Topa, and W. van der Klaauw</p>
+                        <p class="venue">Journal of Monetary Economics, August 2024</p>
+                    </div>
+
+                    <div class="publication">
+                        <a href="https://www.sciencedirect.com/science/article/abs/pii/S0167268124000337" class="pub-title" target="_blank" rel="noopener">Gasoline Price Changes and Consumer Inflation Expectations: Experimental Evidence</a>
+                        <p class="authors">with O. Armantier, G. Koşar, J. Somerville, G. Topa, and W. van der Klaauw</p>
+                        <p class="venue">Journal of Economic Behavior and Organization, April 2024</p>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Media Panel -->
+            <div class="panel" id="media">
+                <section id="media-coverage">
+                    <h2>Selected Media Coverage and Commentary</h2>
+
+                    <h3>Labor Markets</h3>
+
+                    <div class="publication">
+                        <a href="https://www.marketplace.org/story/2026/02/23/why-workers-are-staying-put-in-this-labor-market" class="pub-title" target="_blank" rel="noopener">Why workers are staying put in this labor market</a>
+                        <p class="venue">NPR Marketplace, February 2026</p>
+                    </div>
+
+                    <div class="publication">
+                        <a href="https://www.ft.com/content/9953b207-ba0b-4672-9e26-0d0b6f6fa190" class="pub-title" target="_blank" rel="noopener">Big US companies set to lay off at least 52,000 workers as jobs market cools</a>
+                        <p class="venue">Financial Times, January 2026</p>
+                    </div>
+
+                    <div class="publication">
+                        <a href="https://finance.yahoo.com/news/most-americans-dont-expect-to-work-into-their-mid-60s-chart-of-the-week-100010938.html" class="pub-title" target="_blank" rel="noopener">Most Americans don't expect to work into their mid-60s</a>
+                        <p class="venue">Yahoo Finance Chart of the Week, May 2024</p>
+                    </div>
+
+                    <h3>Buy Now, Pay Later</h3>
+
+                    <div class="publication">
+                        <a href="https://www.nprillinois.org/2025-12-13/should-you-use-buy-now-pay-later-experts-share-4-tips-to-know" class="pub-title" target="_blank" rel="noopener">Should you use buy now, pay later? Experts share 4 tips to know</a>
+                        <p class="venue">NPR Life Kit, December 2025</p>
+                    </div>
+
+                    <div class="publication">
+                        <a href="https://www.npr.org/2024/02/14/1231514249/buy-now-pay-later-credit-cards" class="pub-title" target="_blank" rel="noopener">Buy now, pay later is extending credit to millions, often young people with debt</a>
+                        <p class="venue">NPR All Things Considered, February 2024</p>
+                    </div>
+
+                    <div class="publication">
+                        <a href="https://www.linkedin.com/posts/federal-reserve-bank-of-new-york_whats-behind-the-use-of-buy-now-pay-later-ugcPost-7167909252869652480-Epwq/" class="pub-title" target="_blank" rel="noopener">What's behind the use of "Buy Now, Pay Later"?</a>
+                        <p class="venue">Federal Reserve Bank of New York, February 2024</p>
+                    </div>
+                </section>
+            </div>
+
+
+
+        </main>
+    </div>
+
+    <script>
+        // Tab switching functionality
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active class from all tabs and panels
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+
+                // Add active class to clicked tab and corresponding panel
+                tab.classList.add('active');
+                document.getElementById(tab.dataset.tab).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

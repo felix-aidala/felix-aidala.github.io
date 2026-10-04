@@ -64,7 +64,7 @@
             <div class="sticky-header">
                 <!-- About Section -->
                 <section id="about">
-                    <p>Howdy! I'm an economist at the <a href="https://hiringlab.indeed.com" target="_blank" rel="noopener">Indeed Hiring Lab</a> and an Economic Advisor at <a href="https://cardinal40.com/" target="_blank" rel="noopener">Cardinal40</a>. My current research largely focuses on macroeconomic policy, labor markets, and AI. Previously, I was a research analyst in consumer behavior studies at the Federal Reserve Bank of New York. I hold an MA in Economics from Duke University.</p>
+                    <p>Howdy! I'm an economist at the <a href="https://hiringlab.indeed.com" target="_blank" rel="noopener">Indeed Hiring Lab</a> and an Economic Advisor at <a href="https://cardinal40.com/" target="_blank" rel="noopener">Cardinal40</a>. My current research largely focuses on macroeconomic policy, labor markets, and AI.</p>
                 </section>
 
                 <!-- Tab Navigation -->
@@ -72,6 +72,7 @@
                     <button class="tab active" data-tab="writing">Public Writing</button>
                     <button class="tab" data-tab="academic">Academic Research</button>
                     <button class="tab" data-tab="media">Media</button>
+                    <button class="tab" data-tab="contact">Contact</button>
                 </div>
             </div>
 
@@ -304,7 +305,28 @@
                 </section>
             </div>
 
+            <div class="panel" id="contact">
+                <section id="contact-form-section">
+                    <h2>Contact</h2>
 
+                    <form id="contact-form" class="contact-form" action="https://formspree.io/f/xdeanvgo" method="POST">
+                        <label for="contact-name">Name</label>
+                        <input type="text" id="contact-name" name="name" autocomplete="name" required>
+
+                        <label for="contact-email">Email</label>
+                        <input type="email" id="contact-email" name="email" autocomplete="email" required>
+
+                        <label for="contact-message">Message</label>
+                        <textarea id="contact-message" name="message" rows="6" required></textarea>
+
+                        <!-- Spam honeypot -->
+                        <input type="text" name="_gotcha" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+                        <button type="submit">Send Message</button>
+                        <p class="form-status" role="status" aria-live="polite"></p>
+                    </form>
+                </section>
+            </div>
 
         </main>
     </div>
@@ -321,6 +343,33 @@
                 tab.classList.add('active');
                 document.getElementById(tab.dataset.tab).classList.add('active');
             });
+        });
+
+        // Contact form submission
+        const contactForm = document.getElementById('contact-form');
+        const formStatus = contactForm.querySelector('.form-status');
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const button = contactForm.querySelector('button');
+            button.disabled = true;
+            formStatus.className = 'form-status';
+            formStatus.textContent = 'Sending...';
+            try {
+                const response = await fetch(contactForm.action, {
+                    method: 'POST',
+                    body: new FormData(contactForm),
+                    headers: { 'Accept': 'application/json' }
+                });
+                if (!response.ok) throw new Error();
+                contactForm.reset();
+                formStatus.classList.add('success');
+                formStatus.textContent = 'Thanks! Your message has been sent.';
+            } catch {
+                formStatus.classList.add('error');
+                formStatus.textContent = 'Something went wrong. Please try again or email me directly.';
+            } finally {
+                button.disabled = false;
+            }
         });
     </script>
 </body>

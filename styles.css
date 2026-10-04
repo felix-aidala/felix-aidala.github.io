@@ -294,6 +294,7 @@ h3.subsection:first-of-type {
     border: none;
     cursor: pointer;
     position: relative;
+    white-space: nowrap;
     transition: color 0.2s ease;
 }
 
@@ -394,4 +395,91 @@ h3.subsection:first-of-type {
     .entry .date {
         font-size: 0.8rem;
     }
+
+    .tab {
+        flex: 1;
+        padding: 0.75rem 0.4rem;
+        font-size: 0.95rem;
+        white-space: normal;
+    }
+}
+
+/* Contact Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 560px;
+}
+
+.contact-form label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: 0.35rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    font-family: inherit;
+    font-size: 1rem;
+    color: var(--text-primary);
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.65rem 0.85rem;
+    margin-bottom: 1.25rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(139, 115, 85, 0.15);
+}
+
+.contact-form .honeypot {
+    display: none;
+}
+
+.contact-form button {
+    align-self: flex-start;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #FFFFFF;
+    background-color: var(--accent);
+    border: none;
+    border-radius: 8px;
+    padding: 0.7rem 1.6rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.contact-form button:hover {
+    background-color: var(--accent-hover);
+}
+
+.contact-form button:disabled {
+    opacity: 0.6;
+    cursor: default;
+}
+
+.form-status {
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    color: var(--text-muted);
+}
+
+.form-status.success {
+    color: #4A7A4A;
+}
+
+.form-status.error {
+    color: #A04040;
 }
